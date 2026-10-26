@@ -1,1 +1,1 @@
-linkedlist.github.io source based on Jekyll and Type Theme
+Source for [linkedlist.cz](https://linkedlist.cz/), a single static HTML page served by GitHub Pages.

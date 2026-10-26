@@ -1,52 +1,32 @@
----
-layout: default
----
-
-<div class="home">
-  {% if site.theme_settings.header_text %}
-  <div class="call-out"
-  style="background-image: url('{{ site.baseurl }}/{{ site.theme_settings.header_text_feature_image }}')">
-    {{ site.theme_settings.header_text }}
-  </div>
-  {% endif %}
-
-  <div class="posts">
-    {% for post in paginator.posts %}
-    <div class="post-teaser">
-      <header>
-        <h1>
-          <a class="post-link" href="{{ post.url | prepend: site.baseurl }}">
-            {{ post.title }}
-          </a>
-        </h1>
-        <p class="meta">
-          {{ post.date | date: "%B %-d, %Y" }}
-        </p>
-      </header>
-      <div class="excerpt">
-        {{ post.excerpt }}
-        <a class="button" href="{{ post.url | prepend: site.baseurl }}">
-          {{ site.theme_settings.str_continue_reading }}
-        </a>
-      </div>
-    </div>
-    {% endfor %}
-  </div>
-
-  {% if paginator.total_pages > 1 %}
-  <div class="pagination">
-    {% if paginator.previous_page %}
-    <a href="{{ paginator.previous_page_path | prepend: site.baseurl | replace: '//', '/' }}" class="button" >
-      <i class="fa fa-chevron-left"></i>
-      {{ site.theme_settings.str_prev }}
-    </a>
-    {% endif %}
-    {% if paginator.next_page %}
-    <a href="{{ paginator.next_page_path | prepend: site.baseurl | replace: '//', '/' }}" class="button" >
-      {{ site.theme_settings.str_next }}
-      <i class="fa fa-chevron-right"></i>
-    </a>
-    {% endif %}
-  </div>
-  {% endif %}
-</div>
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Martin Macko</title>
+  <meta name="description" content="Martin Macko, staff engineer at Ataccama, working on fleet management.">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Martin Macko">
+  <meta property="og:description" content="Staff engineer at Ataccama, working on fleet management.">
+  <meta property="og:url" content="https://linkedlist.cz/">
+  <link rel="canonical" href="https://linkedlist.cz/">
+  <style>
+    :root { color-scheme: light dark; }
+    body {
+      max-width: 36rem;
+      margin: 4rem auto;
+      padding: 0 1rem;
+      font-family: system-ui, sans-serif;
+      line-height: 1.6;
+    }
+    a { color: light-dark(#1a5fb4, #8cb4ff); }
+  </style>
+</head>
+<body>
+  <main>
+    <h1>Martin Macko</h1>
+    <p>Staff engineer at <a href="https://www.ataccama.com/">Ataccama</a>, working on fleet management.</p>
+    <p>My open source projects are on <a href="https://github.com/LinkedList" rel="me">GitHub</a>.</p>
+  </main>
+</body>
+</html>
